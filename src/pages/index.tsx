@@ -10,7 +10,7 @@ const Home = () => {
     onMutate: () => {
       ctx.guestbook.getAll.cancel();
 
-      let optimisticUpdate = ctx.guestbook.getAll.getData();
+      const optimisticUpdate = ctx.guestbook.getAll.getData();
 
       if (optimisticUpdate) {
         ctx.guestbook.getAll.setData(optimisticUpdate);
